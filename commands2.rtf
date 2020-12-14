@@ -1,0 +1,317 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\margl1440\margr1440\vieww28600\viewh15580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Ifconfig\
+\
+1.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 centos@ip-172-31-21-194 ~]$ ifconfig\
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001\
+        inet 172.31.21.194  netmask 255.255.240.0  broadcast 172.31.31.255\
+        inet6 fe80::424:3ff:fefe:5e8c  prefixlen 64  scopeid 0x20<link>\
+        ether 06:24:03:fe:5e:8c  txqueuelen 1000  (Ethernet)\
+        RX packets 29889  bytes 3198171 (3.0 MiB)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 28472  bytes 5150184 (4.9 MiB)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536\
+        inet 127.0.0.1  netmask 255.0.0.0\
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>\
+        loop  txqueuelen 1000  (Local Loopback)\
+        RX packets 6  bytes 416 (416.0 B)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 6  bytes 416 (416.0 B)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+2. [centos@ip-172-31-21-194 ~]$ ifconfig -a\
+\
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001\
+        inet 172.31.21.194  netmask 255.255.240.0  broadcast 172.31.31.255\
+        inet6 fe80::424:3ff:fefe:5e8c  prefixlen 64  scopeid 0x20<link>\
+        ether 06:24:03:fe:5e:8c  txqueuelen 1000  (Ethernet)\
+        RX packets 29956  bytes 3205310 (3.0 MiB)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 28535  bytes 5159190 (4.9 MiB)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536\
+        inet 127.0.0.1  netmask 255.0.0.0\
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>\
+        loop  txqueuelen 1000  (Local Loopback)\
+        RX packets 6  bytes 416 (416.0 B)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 6  bytes 416 (416.0 B)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+3. \
+[centos@ip-172-31-21-194 ~]$ ifconfig etho\
+\
+etho: error fetching interface information: Device not found\
+[centos@ip-172-31-21-194 ~]$ ifconfig eth0\
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001\
+        inet 172.31.21.194  netmask 255.255.240.0  broadcast 172.31.31.255\
+        inet6 fe80::424:3ff:fefe:5e8c  prefixlen 64  scopeid 0x20<link>\
+        ether 06:24:03:fe:5e:8c  txqueuelen 1000  (Ethernet)\
+        RX packets 29997  bytes 3209900 (3.0 MiB)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 28572  bytes 5174905 (4.9 MiB)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+\
+4. [centos@ip-172-31-21-194 ~]$ ifconfig eth0 up\
+SIOCSIFFLAGS: Operation not permitted\
+\
+\
+5. [centos@ip-172-31-21-194 ~]$ ifconfig eth0 promisc\
+SIOCSIFFLAGS: Operation not permitted\
+\
+\
+\
+ 6.[centos@ip-172-31-21-194 ~]$ ifconfig eth0 -promisc\
+SIOCSIFFLAGS: Operation not permitted\
+[centos@ip-172-31-21-194 ~]$ \
+\
+7. ifconfig -v\
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001\
+        inet 172.31.21.194  netmask 255.255.240.0  broadcast 172.31.31.255\
+        inet6 fe80::424:3ff:fefe:5e8c  prefixlen 64  scopeid 0x20<link>\
+        ether 06:24:03:fe:5e:8c  txqueuelen 1000  (Ethernet)\
+        RX packets 30088  bytes 3219018 (3.0 MiB)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 28649  bytes 5200237 (4.9 MiB)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536\
+        inet 127.0.0.1  netmask 255.0.0.0\
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>\
+        loop  txqueuelen 1000  (Local Loopback)\
+        RX packets 6  bytes 416 (416.0 B)\
+        RX errors 0  dropped 0  overruns 0  frame 0\
+        TX packets 6  bytes 416 (416.0 B)\
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0\
+\
+\
+8.[centos@ip-172-31-21-194 ~]$ ifconfig interface [-]allmulti\
+[-]allmulti: Unknown host\
+ifconfig: `--help' gives usage information.\
+\
+\
+\
+9.$ ifconfig --help\
+Usage:\
+  ifconfig [-a] [-v] [-s] <interface> [[<AF>] <address>]\
+  [add <address>[/<prefixlen>]]\
+  [del <address>[/<prefixlen>]]\
+  [[-]broadcast [<address>]]  [[-]pointopoint [<address>]]\
+  [netmask <address>]  [dstaddr <address>]  [tunnel <address>]\
+  [outfill <NN>] [keepalive <NN>]\
+  [hw <HW> <address>]  [mtu <NN>]\
+  [[-]trailers]  [[-]arp]  [[-]allmulti]\
+  [multicast]  [[-]promisc]\
+  [mem_start <NN>]  [io_addr <NN>]  [irq <NN>]  [media <type>]\
+  [txqueuelen <NN>]\
+  [[-]dynamic]\
+  [up|down] ...\
+\
+  <HW>=Hardware Type.\
+  List of possible hardware types:\
+    loop (Local Loopback) slip (Serial Line IP) cslip (VJ Serial Line IP) \
+    slip6 (6-bit Serial Line IP) cslip6 (VJ 6-bit Serial Line IP) adaptive (Adaptive Serial Line IP) \
+    ash (Ash) ether (Ethernet) ax25 (AMPR AX.25) \
+    netrom (AMPR NET/ROM) rose (AMPR ROSE) tunnel (IPIP Tunnel) \
+    ppp (Point-to-Point Protocol) hdlc ((Cisco)-HDLC) lapb (LAPB) \
+    arcnet (ARCnet) dlci (Frame Relay DLCI) frad (Frame Relay Access Device) \
+    sit (IPv6-in-IPv4) fddi (Fiber Distributed Data Interface) hippi (HIPPI) \
+    irda (IrLAP) ec (Econet) x25 (generic X.25) \
+    infiniband (InfiniBand) eui64 (Generic EUI-64) \
+  <AF>=Address family. Default: inet\
+  List of possible address families:\
+    unix (UNIX Domain) inet (DARPA Internet) inet6 (IPv6) \
+    ax25 (AMPR AX.25) netrom (AMPR NET/ROM) rose (AMPR ROSE) \
+    ipx (Novell IPX) ddp (Appletalk DDP) ec (Econet) \
+    ash (Ash) x25 (CCITT X.25) \
+\
+\
+10.  ifconfig -s\
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg\
+eth0             9001    30386      0      0 0         28881      0      0      0 BMRU\
+lo              65536        6      0      0 0             6      0      0      0 LRU\
+[centos@ip-172-31-21-194 ~]$ \
+\
+\
+\
+[centos@ip-172-31-21-194 ~]$ du\
+\
+16	./.ssh\
+0	./letter/important\
+0	./letter\
+8	./stellarit-devops-mar19/.git/refs/heads\
+0	./stellarit-devops-mar19/.git/refs/tags\
+68	./stellarit-devops-mar19/.git/refs/remotes/origin\
+68	./stellarit-devops-mar19/.git/refs/remotes\
+76	./stellarit-devops-mar19/.git/refs\
+0	./stellarit-devops-mar19/.git/branches\
+40	./stellarit-devops-mar19/.git/hooks\
+4	./stellarit-devops-mar19/.git/info\
+435964	./stellarit-devops-mar19/.git/objects/pack\
+0	./stellarit-devops-mar19/.git/objects/info\
+4	./stellarit-devops-mar19/.git/objects/cd\
+8	./stellarit-devops-mar19/.git/objects/3a\
+4	./stellarit-devops-mar19/.git/objects/2a\
+4	./stellarit-devops-mar19/.git/objects/39\
+4	./stellarit-devops-mar19/.git/objects/55\
+4	./stellarit-devops-mar19/.git/objects/de\
+4	./stellarit-devops-mar19/.git/objects/45\
+4	./stellarit-devops-mar19/.git/objects/22\
+8	./stellarit-devops-mar19/.git/objects/04\
+4	./stellarit-devops-mar19/.git/objects/b8\
+4	./stellarit-devops-mar19/.git/objects/5a\
+4	./stellarit-devops-mar19/.git/objects/27\
+4	./stellarit-devops-mar19/.git/objects/a5\
+4	./stellarit-devops-mar19/.git/objects/19\
+4	./stellarit-devops-mar19/.git/objects/c7\
+4	./stellarit-devops-mar19/.git/objects/d5\
+8	./stellarit-devops-mar19/.git/objects/a7\
+4	./stellarit-devops-mar19/.git/objects/8e\
+4	./stellarit-devops-mar19/.git/objects/f3\
+4	./stellarit-devops-mar19/.git/objects/aa\
+4	./stellarit-devops-mar19/.git/objects/8f\
+4	./stellarit-devops-mar19/.git/objects/ed\
+4	./stellarit-devops-mar19/.git/objects/51\
+4	./stellarit-devops-mar19/.git/objects/67\
+4	./stellarit-devops-mar19/.git/objects/ba\
+4	./stellarit-devops-mar19/.git/objects/d3\
+4	./stellarit-devops-mar19/.git/objects/f6\
+4	./stellarit-devops-mar19/.git/objects/44\
+4	./stellarit-devops-mar19/.git/objects/1b\
+4	./stellarit-devops-mar19/.git/objects/e9\
+4	./stellarit-devops-mar19/.git/objects/7f\
+4	./stellarit-devops-mar19/.git/objects/60\
+4	./stellarit-devops-mar19/.git/objects/0a\
+4	./stellarit-devops-mar19/.git/objects/8b\
+4	./stellarit-devops-mar19/.git/objects/61\
+4	./stellarit-devops-mar19/.git/objects/4e\
+4	./stellarit-devops-mar19/.git/objects/c1\
+4	./stellarit-devops-mar19/.git/objects/fe\
+4	./stellarit-devops-mar19/.git/objects/30\
+436136	./stellarit-devops-mar19/.git/objects\
+68	./stellarit-devops-mar19/.git/logs/refs/remotes/origin\
+68	./stellarit-devops-mar19/.git/logs/refs/remotes\
+8	./stellarit-devops-mar19/.git/logs/refs/heads\
+76	./stellarit-devops-mar19/.git/logs/refs\
+80	./stellarit-devops-mar19/.git/logs\
+436416	./stellarit-devops-mar19/.git\
+24	./stellarit-devops-mar19/Interviews\
+240	./stellarit-devops-mar19/Quizzes\
+20	./stellarit-devops-mar19/Test/Assignment_Submission\
+40	./stellarit-devops-mar19/Test\
+6752	./stellarit-devops-mar19/Training_Materials/AWS/Introduction\
+28320	./stellarit-devops-mar19/Training_Materials/AWS\
+6496	./stellarit-devops-mar19/Training_Materials/Ansible\
+21512	./stellarit-devops-mar19/Training_Materials/Artifactory\
+8144	./stellarit-devops-mar19/Training_Materials/Azure\
+15092	./stellarit-devops-mar19/Training_Materials/Chef\
+384	./stellarit-devops-mar19/Training_Materials/Classes/Git\
+2184	./stellarit-devops-mar19/Training_Materials/Classes/Linux_Commands_Class1\
+1152	./stellarit-devops-mar19/Training_Materials/Classes/Linux_Commands_Class2\
+13120	./stellarit-devops-mar19/Training_Materials/Classes/Linux Networking\
+6836	./stellarit-devops-mar19/Training_Materials/Classes/OS_Networking_Linux\
+23684	./stellarit-devops-mar19/Training_Materials/Classes\
+220	./stellarit-devops-mar19/Training_Materials/Continuous_Delivery\
+26052	./stellarit-devops-mar19/Training_Materials/Demo\
+31616	./stellarit-devops-mar19/Training_Materials/Docker\
+4244	./stellarit-devops-mar19/Training_Materials/Gradle\
+9976	./stellarit-devops-mar19/Training_Materials/Grunt\
+10060	./stellarit-devops-mar19/Training_Materials/IaC\
+5356	./stellarit-devops-mar19/Training_Materials/Kubernetes\
+8	./stellarit-devops-mar19/Training_Materials/Linux/shell_script\
+20976	./stellarit-devops-mar19/Training_Materials/Linux\
+9564	./stellarit-devops-mar19/Training_Materials/Misc\
+4932	./stellarit-devops-mar19/Training_Materials/Monitoring\
+2040	./stellarit-devops-mar19/Training_Materials/Nexus\
+44960	./stellarit-devops-mar19/Training_Materials/Puppet\
+11884	./stellarit-devops-mar19/Training_Materials/Python\
+1528	./stellarit-devops-mar19/Training_Materials/Ruby\
+820	./stellarit-devops-mar19/Training_Materials/Tomcat\
+20328	./stellarit-devops-mar19/Training_Materials/build_automation/Ant\
+72848	./stellarit-devops-mar19/Training_Materials/build_automation/maven\
+93188	./stellarit-devops-mar19/Training_Materials/build_automation\
+25196	./stellarit-devops-mar19/Training_Materials/jenkins\
+3328	./stellarit-devops-mar19/Training_Materials/vcs/Branching_Strategies\
+22944	./stellarit-devops-mar19/Training_Materials/vcs/git\
+28184	./stellarit-devops-mar19/Training_Materials/vcs\
+440084	./stellarit-devops-mar19/Training_Materials\
+876812	./stellarit-devops-mar19\
+0	./abc\
+876904	.\
+\
+\
+\
+\
+[centos@ip-172-31-21-194 ~]$ df\
+Filesystem     1K-blocks    Used Available Use% Mounted on\
+devtmpfs          482584       0    482584   0% /dev\
+tmpfs             506516       0    506516   0% /dev/shm\
+tmpfs             506516   19460    487056   4% /run\
+tmpfs             506516       0    506516   0% /sys/fs/cgroup\
+/dev/xvda1       8377344 2010708   6366636  25% /\
+tmpfs             101304       0    101304   0% /run/user/1000\
+[centos@ip-172-31-21-194 ~]$ dd\
+^[[A^C0+0 records in\
+0+0 records out\
+0 bytes (0 B) copied, 12.8217 s, 0.0 kB/s\
+\
+\
+\
+\
+\
+\
+[centos@ip-172-31-21-194 ~]$ free\
+              total        used        free      shared  buff/cache   available\
+Mem:        1013032      136852      645956       19536      230224      717220\
+Swap:             0           0           0\
+\
+\
+\
+\
+[centos@ip-172-31-21-194 ~]$ mount\
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)\
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)\
+devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=482584k,nr_inodes=120646,mode=755)\
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)\
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel)\
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)\
+tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,mode=755)\
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,seclabel,mode=755)\
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)\
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)\
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,perf_event)\
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,blkio)\
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,devices)\
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,pids)\
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,memory)\
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,freezer)\
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,hugetlb)\
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,net_prio,net_cls)\
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,cpuset)\
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,cpuacct,cpu)\
+configfs on /sys/kernel/config type configfs (rw,relatime)\
+/dev/xvda1 on / type xfs (rw,relatime,seclabel,attr2,inode64,noquota)\
+rpc_pipefs on /var/lib/nfs/rpc_pipefs type rpc_pipefs (rw,relatime)\
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)\
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,seclabel)\
+debugfs on /sys/kernel/debug type debugfs (rw,relatime)\
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=30,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=13222)\
+mqueue on /dev/mqueue type mqueue (rw,relatime,seclabel)\
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=101304k,mode=700,uid=1000,gid=1000)\
+\
+\
+\
+\
+}
